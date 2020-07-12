@@ -4,7 +4,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel lib -d dist",
-    "start": "npm run build && nodemon dist/index.js",
+    "start": "nodemon --exec babel-node lib/index.js",
     "serve": "npm run build && node dist/index.js"
   },
   "author": "Vasu Agrawal",
@@ -20,10 +20,11 @@
   },
   "dependencies": {
     "@alpacahq/alpaca-trade-api": "^1.2.9",
+    "@babel/node": "^7.10.4",
     "@babel/runtime": "^7.8.7",
-    "technicalindicators": "^3.1.0",
-    "underscore": "1.10.2",
     "lodash": "4.17.19",
-    "stats-lite": "2.2.0"
+    "stats-lite": "2.2.0",
+    "technicalindicators": "^3.1.0",
+    "underscore": "1.10.2"
   }
 }
